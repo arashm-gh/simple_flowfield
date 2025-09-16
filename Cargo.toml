@@ -1,0 +1,11 @@
+[package]
+name = "simple-flowfield"
+authors = ["arashm"]
+version = "1.0.0"
+edition = "2024"
+description = "A very barebones flowfield pathfinding library."
+license = "MIT"
+repository = ""
+
+[dependencies]
+raylib = { version = "5.5.1", features = ["wayland"] }
