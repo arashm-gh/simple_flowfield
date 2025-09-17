@@ -1,4 +1,4 @@
-use flowfield::{Agent, FlowField, Grid};
+use simple_flowfield::*;
 use raylib::prelude::*;
 
 fn main() {
@@ -7,11 +7,11 @@ fn main() {
         .title("FlowField Usage")
         .build();
 
-    let mut grid = flowfield::Grid::new(100, 100);
+    let mut grid = simple_flowfield::Grid::new(100, 100);
     grid.set_rect_obstacle(40, 0, 3, 60, true);
     grid.set_rect_obstacle(40, 61, 3, 34, true);
 
-    let field = flowfield::FlowField::new(&grid, (31, 10));
+    let field = simple_flowfield::FlowField::new(&grid, (31, 10));
     let mut agent = Agent::new(67, 30);
     rl.set_target_fps(12);
     while !rl.window_should_close() {

@@ -7,13 +7,13 @@ flowfield is a rust crate for quickly and easily implementing a FlowField pathfi
 Use:
 
 ```bash
-cargo add flowfield
+cargo add simple_flowfield
 ```
 
 ## Usage
 
 ```rust
-use flowfield::*; 
+use simple_flowfield::*; 
 
 // define the entire grid map 
 let grid = grid::Grid::new(100, 100);

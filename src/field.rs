@@ -12,11 +12,11 @@ impl FlowField {
     pub fn new(grid: &Grid, target: (usize, usize)) -> Self {
         let (w, h) = (grid.width, grid.height);
 
-        // 1. Initialize costs
+        // init costs
         let mut costs = vec![vec![i32::MAX; w as usize]; h as usize];
         costs[target.1][target.0] = 0;
 
-        // 2. BFS queue
+        // breadth-first search queue
         let mut queue = VecDeque::new();
         queue.push_back(target);
 
@@ -54,7 +54,7 @@ impl FlowField {
             }
         }
 
-        // 3. Compute flow directions
+        // flow directions
         let mut directions = vec![vec![(0, 0); w as usize]; h as usize];
         for y in 0..h as usize {
             for x in 0..w as usize {
@@ -62,7 +62,7 @@ impl FlowField {
                     continue; // leave as (0,0)
                 }
 
-                // Pick neighbor with lowest cost
+                // neighbor with lowest cost
                 let mut best_dir = (0, 0);
                 let mut best_cost = costs[y][x];
 
