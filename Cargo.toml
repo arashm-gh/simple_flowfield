@@ -5,7 +5,7 @@ version = "1.0.0"
 edition = "2024"
 description = "A very barebones flowfield pathfinding library."
 license = "MIT"
-repository = "https://github.com/CyanSpaghetti/simple_flowfield"
+repository = "https://github.com/arashm-gh/simple_flowfield"
 
 [dependencies]
 raylib = { version = "5.5.1", features = ["wayland"] }
