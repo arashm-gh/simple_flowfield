@@ -1,18 +1,18 @@
-use simple_flowfield::*;
 use raylib::prelude::*;
+use simple_flowfield::*;
 
 fn main() {
     let (mut rl, thread) = raylib::init()
         .size(1920, 1080)
-        .title("FlowField Usage")
+        .title("FlowField2D Usage")
         .build();
 
-    let mut grid = simple_flowfield::Grid::new(100, 100);
+    let mut grid = simple_flowfield::Grid2D::new(100, 100);
     grid.set_rect_obstacle(40, 0, 3, 60, true);
     grid.set_rect_obstacle(40, 61, 3, 34, true);
 
-    let field = simple_flowfield::FlowField::new(&grid, (31, 10));
-    let mut agent = Agent::new(67, 30);
+    let field = simple_flowfield::FlowField2D::new(&grid, (31, 10));
+    let mut agent = Agent2D::new(67, 30);
     rl.set_target_fps(12);
     while !rl.window_should_close() {
         // input
