@@ -1,7 +1,7 @@
 [package]
 name = "simple_flowfield"
 authors = ["arashm"]
-version = "1.0.0"
+version = "2.0.0"
 edition = "2024"
 description = "A very barebones flowfield pathfinding library."
 license = "MIT"
